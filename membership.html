@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAT - Membership</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://smadservices.org/wp-content/uploads/2024/08/IMG-20240626-WA0082-1536x1524.jpg" alt="SMAT Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="membership.html" class="active">Membership</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+                <div class="cart-icon" id="headerCartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner membership-banner">
+        <div class="container">
+            <h1>Membership Plans</h1>
+            <p>Join our exclusive membership program and enjoy premium benefits</p>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Join SMAT?</h2>
+                <p>Discover the exclusive benefits of becoming a SMAT member</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>24/7 Gym Access</h3>
+                    <p>Unlimited access to our state-of-the-art gym facilities at any time of day or night.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Exclusive Discounts</h3>
+                    <p>Enjoy special discounts on all our printing services and flower shop products.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Personal Training</h3>
+                    <p>Access to professional personal trainers to help you achieve your fitness goals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Priority Booking</h3>
+                    <p>Priority booking for classes, events, and services before non-members.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Welcome Package</h3>
+                    <p>Receive a welcome package with SMAT merchandise and exclusive offers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Events</h3>
+                    <p>Access to members-only events, workshops, and networking opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section class="plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Plan</h2>
+                <p>Select the membership plan that best suits your needs</p>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">Basic</div>
+                        <div class="plan-price">₦15,000</div>
+                        <div class="plan-duration">per month</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Gym access (6 AM - 10 PM)</li>
+                            <li><i class="fas fa-check"></i> 5% discount on printing</li>
+                            <li><i class="fas fa-check"></i> 5% discount on flowers</li>
+                            <li><i class="fas fa-check"></i> Access to group classes</li>
+                            <li><i class="fas fa-times"></i> Personal training sessions</li>
+                            <li><i class="fas fa-times"></i> Priority booking</li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn" data-plan="Basic">Select Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card featured">
+                    <div class="plan-header">
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-price">₦25,000</div>
+                        <div class="plan-duration">per month</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                            <li><i class="fas fa-check"></i> 10% discount on printing</li>
+                            <li><i class="fas fa-check"></i> 10% discount on flowers</li>
+                            <li><i class="fas fa-check"></i> Access to all classes</li>
+                            <li><i class="fas fa-check"></i> 2 personal training sessions/month</li>
+                            <li><i class="fas fa-check"></i> Priority booking</li>
+                        </ul>
+                        <button class="btn btn-accent plan-btn" data-plan="Premium">Select Plan</button>
+                    </div>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-name">VIP</div>
+                        <div class="plan-price">₦40,000</div>
+                        <div class="plan-duration">per month</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                            <li><i class="fas fa-check"></i> 20% discount on printing</li>
+                            <li><i class="fas fa-check"></i> 20% discount on flowers</li>
+                            <li><i class="fas fa-check"></i> Access to all classes</li>
+                            <li><i class="fas fa-check"></i> 4 personal training sessions/month</li>
+                            <li><i class="fas fa-check"></i> VIP priority booking</li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn" data-plan="VIP">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="registration" class="registration">
+        <div class="container">
+            <div class="section-header">
+                <h2>Register Now</h2>
+                <p>Fill out the form below to join our membership program</p>
+            </div>
+            <div class="form-container">
+                <form id="membershipForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="form-control" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectedPlan">Selected Plan</label>
+                        <select id="selectedPlan" class="form-control" required>
+                            <option value="">Select a plan</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Premium">Premium</option>
+                            <option value="VIP">VIP</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" class="form-control" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Members Say</h2>
+                <p>Hear from our members about their experiences with SMAT</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">
+                                <p>"Joining SMAT was one of the best decisions I've made. The gym facilities are excellent, and the discounts on printing and flowers have saved me a lot of money. Highly recommend the Premium plan!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="/placeholder.svg?height=70&width=70" alt="Sarah Johnson">
+                                </div>
+                                <div class="author-name">Sarah Johnson</div>
+                                <div class="author-title">Premium Member</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">
+                                <p>"The personal training sessions included in the VIP membership have transformed my fitness journey. The trainers are knowledgeable and motivating, and the 24/7 access fits perfectly with my busy schedule."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="/placeholder.svg?height=70&width=70" alt="David Williams">
+                                </div>
+                                <div class="author-name">David Williams</div>
+                                <div class="author-title">VIP Member</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-text">
+                                <p>"Even the Basic membership offers great value. I love the group classes and the community atmosphere at SMAT. It's more than just a gym - it's a lifestyle!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="/placeholder.svg?height=70&width=70" alt="Lisa Chen">
+                                </div>
+                                <div class="author-name">Lisa Chen</div>
+                                <div class="author-title">Basic Member</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <div class="slider-dots">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                        <div class="dot" data-index="2"></div>
+                    </div>
+                </div>
+                <div class="slider-arrows">
+                    <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
+                    <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our membership program</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I cancel my membership?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can cancel your membership by visiting our facility in person or by sending an email to membership@smat.com. Please note that we require a 30-day notice for all cancellations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I freeze my membership temporarily?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can freeze your membership for up to 3 months per year. There is a small administrative fee for this service. Please contact our membership team for more details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are there any joining fees?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, there is a one-time joining fee of ₦5,000 for all new members. This fee covers your welcome package and administrative costs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I upgrade my membership plan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade your membership plan at any time. The new rate will be prorated for the remainder of your billing cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://smadservices.org/wp-content/uploads/2024/08/IMG-20240626-WA0082-1536x1524.jpg" alt="SMAT Logo">
+                    <p>SMAT is your one-stop solution for printing services, gym facilities, and beautiful flowers. We are committed to providing high-quality services that enhance your personal and professional life.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="shop.html">Printing Services</a></li>
+                        <li><a href="membership.html">Gym Facilities</a></li>
+                        <li><a href="shop.html">Flower Shop</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Personal Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Main Street, Lagos, Nigeria</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+234 123 456 7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@smat.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 8:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMAT. All Rights Reserved  <a href="#">SamTech Innovations</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-container" id="cartContainer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₦0</span>
+            </div>
+            <button id="checkoutBtn" class="btn btn-primary" style="width: 100%;">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

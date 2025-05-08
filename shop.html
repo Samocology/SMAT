@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAT - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://smadservices.org/wp-content/uploads/2024/08/IMG-20240626-WA0082-1536x1524.jpg" alt="SMAT Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                </ul>
+                <div class="cart-icon" id="headerCartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner shop-banner">
+        <div class="container">
+            <h1>Shop</h1>
+            <p>Browse our products and services</p>
+        </div>
+    </section>
+
+    <!-- Shop Categories -->
+    <section class="shop-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Categories</h2>
+                <p>Explore our range of products and services</p>
+            </div>
+            <div class="categories-tabs">
+                <button class="category-tab active" data-category="all">All Products</button>
+                <button class="category-tab" data-category="printing">Printing</button>
+                <button class="category-tab" data-category="fitness">Fitness</button>
+                <button class="category-tab" data-category="flowers">Flowers</button>
+            </div>
+            
+            <div class="shop-search">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Products -->
+    <section class="shop-products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Printing Products -->
+                <div class="product-card" data-category="printing">
+                    <div class="product-image">
+                        <img src="images/product-business-cards.jpg" alt="Business Cards">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Business Cards</h3>
+                        <p class="product-description">Premium quality business cards with custom designs.</p>
+                        <div class="product-price">
+                            <span class="price">₦5,000</span>
+                            <span class="unit">/ 100 pcs</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="p1">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="printing">
+                    <div class="product-image">
+                        <img src="images/product-flyers.jpg" alt="Flyers">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Flyers & Brochures</h3>
+                        <p class="product-description">High-quality flyers and brochures for your marketing needs.</p>
+                        <div class="product-price">
+                            <span class="price">₦15,000</span>
+                            <span class="unit">/ 500 pcs</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="p2">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="printing">
+                    <div class="product-image">
+                        <img src="images/product-banners.jpg" alt="Banners">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Banners & Signage</h3>
+                        <p class="product-description">Custom banners and signage for events and businesses.</p>
+                        <div class="product-price">
+                            <span class="price">₦8,000</span>
+                            <span class="unit">/ sqm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="p3">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="printing">
+                    <div class="product-image">
+                        <img src="images/product-tshirts.jpg" alt="Custom T-Shirts">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Custom T-Shirts</h3>
+                        <p class="product-description">Personalized t-shirts with your design or logo.</p>
+                        <div class="product-price">
+                            <span class="price">₦3,500</span>
+                            <span class="unit">/ piece</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="p4">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Fitness Products -->
+                <div class="product-card" data-category="fitness">
+                    <div class="product-image">
+                        <img src="images/product-gym-membership.jpg" alt="Gym Membership">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Monthly Membership</h3>
+                        <p class="product-description">Full access to our fitness center for one month.</p>
+                        <div class="product-price">
+                            <span class="price">₦25,000</span>
+                            <span class="unit">/ month</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="f1">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="fitness">
+                    <div class="product-image">
+                        <img src="images/product-personal-training.jpg" alt="Personal Training">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Personal Training</h3>
+                        <p class="product-description">One-on-one training sessions with our certified trainers.</p>
+                        <div class="product-price">
+                            <span class="price">₦8,000</span>
+                            <span class="unit">/ session</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="f2">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="fitness">
+                    <div class="product-image">
+                        <img src="images/product-nutrition-plan.jpg" alt="Nutrition Plan">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Nutrition Plan</h3>
+                        <p class="product-description">Customized nutrition plan to complement your fitness goals.</p>
+                        <div class="product-price">
+                            <span class="price">₦15,000</span>
+                            <span class="unit">/ plan</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="f3">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="fitness">
+                    <div class="product-image">
+                        <img src="images/product-fitness-apparel.jpg" alt="Fitness Apparel">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>SMAT Fitness Apparel</h3>
+                        <p class="product-description">High-quality fitness apparel with the SMAT logo.</p>
+                        <div class="product-price">
+                            <span class="price">₦7,500</span>
+                            <span class="unit">/ set</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="f4">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Flower Products -->
+                <div class="product-card" data-category="flowers">
+                    <div class="product-image">
+                        <img src="images/product-bouquet.jpg" alt="Flower Bouquet">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Bouquet</h3>
+                        <p class="product-description">Beautiful arrangement of fresh seasonal flowers.</p>
+                        <div class="product-price">
+                            <span class="price">₦12,000</span>
+                            <span class="unit">/ bouquet</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="fl1">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="flowers">
+                    <div class="product-image">
+                        <img src="images/product-roses.jpg" alt="Rose Arrangement">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Arrangement</h3>
+                        <p class="product-description">Elegant arrangement of premium roses.</p>
+                        <div class="product-price">
+                            <span class="price">₦15,000</span>
+                            <span class="unit">/ arrangement</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="fl2">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="flowers">
+                    <div class="product-image">
+                        <img src="images/product-indoor-plant.jpg" alt="Indoor Plant">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Indoor Plant</h3>
+                        <p class="product-description">Low-maintenance indoor plants to brighten your space.</p>
+                        <div class="product-price">
+                            <span class="price">₦8,500</span>
+                            <span class="unit">/ plant</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="fl3">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="flowers">
+                    <div class="product-image">
+                        <img src="images/product-event-decoration.jpg" alt="Event Decoration">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-view">Quick View</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Event Decoration</h3>
+                        <p class="product-description">Floral decoration services for events and celebrations.</p>
+                        <div class="product-price">
+                            <span class="price">₦50,000</span>
+                            <span class="unit">/ basic package</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="fl4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-container" id="cartContainer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₦0.00</span>
+            </div>
+            <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="product-modal-details">
+                    <div class="product-modal-image">
+                        <img id="modalProductImage" src="/placeholder.svg" alt="Product Image">
+                    </div>
+                    <div class="product-modal-info">
+                        <h2 id="modalProductTitle"></h2>
+                        <p id="modalProductDescription"></p>
+                        <div class="product-modal-price">
+                            <span id="modalProductPrice"></span>
+                            <span id="modalProductUnit"></span>
+                        </div>
+                        <div class="product-modal-quantity">
+                            <label for="productQuantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button id="decreaseQuantity">-</button>
+                                <input type="number" id="productQuantity" value="1" min="1">
+                                <button id="increaseQuantity">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="modalAddToCart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Custom Products or Services?</h2>
+                <p>Contact us for personalized solutions tailored to your needs.</p>
+                <a href="contact.html" class="btn btn-light">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://smadservices.org/wp-content/uploads/2024/08/IMG-20240626-WA0082-1536x1524.jpg" alt="SMAT Logo">
+                    <p>Your one-stop destination for printing, fitness, and beautiful flowers.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="index.html#printing">Printing Press</a></li>
+                        <li><a href="index.html#fitness">Fitness Center</a></li>
+                        <li><a href="index.html#flowers">Flower Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 SMAT Plaza, Lagos, Nigeria</li>
+                        <li><i class="fas fa-phone"></i> +234 080 3320 5480</li>
+                        <li><i class="fas fa-envelope"></i> info@smatservices.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMAT Services. All Rights Reserved. <a href="#">SamTech Innovations</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
