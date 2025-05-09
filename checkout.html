@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Chunnacal Store</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #5b5bff;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      background: #fff;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #111827;
+    }
+
+    .option {
+      border: 2px solid #e5e7eb;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+      font-size: 1rem;
+    }
+
+    .option:hover {
+      background: #f9fafb;
+      border-color: #3b82f6;
+    }
+
+    .bank-details, .confirmation {
+      display: none;
+      margin-top: 1rem;
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .btn {
+      padding: 0.8rem 1.4rem;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    .btn:disabled {
+      background: gray;
+      cursor: not-allowed;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .checkout-container {
+        padding: 1.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .option {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Choose a Payment Option</h2>
+
+    <div class="option" id="whatsappOption">
+      💬 Negotiate Price via WhatsApp
+    </div>
+
+    <div class="option" id="codOption">
+      🚚 Pay on Delivery
+    </div>
+
+    <div class="option" id="bankOption">
+      💳 Pay with Direct Bank Transfer
+    </div>
+
+    <!-- Pay on Delivery Confirmation -->
+    <div class="confirmation" id="codConfirmation">
+      <p><strong>Order Confirmed!</strong></p>
+      <p>Your item will be delivered to your address. Kindly keep payment ready upon delivery.</p>
+    </div>
+
+    <!-- Bank Transfer Section -->
+    <div class="bank-details" id="bankDetails">
+      <p><strong>Bank Name:</strong> GTBank</p>
+      <p><strong>Account Name:</strong> Chunnacal Store</p>
+      <p><strong>Account Number:</strong> 0123456789</p>
+      <p>After completing the payment, kindly send your proof of payment to us on WhatsApp.</p>
+      <button class="btn" onclick="openWhatsAppWithPaymentProof()">Send Payment Proof via WhatsApp</button>
+    </div>
+  </div>
+
+  <script>
+    const whatsappOption = document.getElementById("whatsappOption");
+    const codOption = document.getElementById("codOption");
+    const bankOption = document.getElementById("bankOption");
+
+    const codConfirmation = document.getElementById("codConfirmation");
+    const bankDetails = document.getElementById("bankDetails");
+
+    // Simulated order data (You'd normally store this from the cart page)
+    const exampleOrder = [
+      { name: "Digital Thermometer", qty: 2, price: "₦4500" },
+      { name: "Blood Pressure Monitor", qty: 1, price: "₦12,000" }
+    ];
+    localStorage.setItem("chunnacalOrder", JSON.stringify(exampleOrder));
+
+    whatsappOption.addEventListener("click", () => {
+      const message = encodeURIComponent("Hello, I would like to negotiate the price for my order from Chunnacal Store.");
+      window.open(`https://wa.me/2347012345678?text=${message}`, "_blank");
+    });
+
+    codOption.addEventListener("click", () => {
+      codConfirmation.style.display = "block";
+      bankDetails.style.display = "none";
+    });
+
+    bankOption.addEventListener("click", () => {
+      codConfirmation.style.display = "none";
+      bankDetails.style.display = "block";
+    });
+
+    function openWhatsAppWithPaymentProof() {
+      const orderItems = JSON.parse(localStorage.getItem("chunnacalOrder")) || [];
+      let orderSummary = "Order Details:\n";
+      orderItems.forEach(item => {
+        orderSummary += `- ${item.qty} x ${item.name} (${item.price})\n`;
+      });
+
+      const message = encodeURIComponent(
+        "Hello, I have transferred the payment. Please find my proof of payment for Chunnacal Store.\n\n" +
+        orderSummary +
+        "\nThank you!"
+      );
+
+      window.open(`https://wa.me/2347035810752?text=${message}`, "_blank");
+    }
+  </script>
+</body>
+</html>
